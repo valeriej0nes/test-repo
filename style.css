@@ -144,9 +144,9 @@ nav ul li a:hover {
 
 /* Adjust spacing for smaller devices */
 @media (max-width: 768px) {
-    .hero-box {
-        margin-top: 20px; /* smaller gap on mobile */
-    }
+    /*.hero-box {
+        margin-top: 20px;
+    }*/
     .hero-box p {
         margin-bottom: 2rem; /* adds gap below the paragraph */
         margin-left: 3rem;
