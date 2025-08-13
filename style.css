@@ -144,20 +144,13 @@ nav ul li a:hover {
 
 /* Adjust spacing for smaller devices */
 @media (max-width: 768px) {
-  .hero-box {
-    margin-top: 20px; /* smaller gap on mobile */
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-box {
-    margin-left: 8rem; /* more space on big screens */
-  }
-
-  .hero-box p {
-      margin-bottom: 2rem; /* adds gap below the paragraph */
-      margin-left: 3rem;
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
+    .hero-box {
+        margin-top: 20px; /* smaller gap on mobile */
+    }
+    .hero-box p {
+        margin-bottom: 2rem; /* adds gap below the paragraph */
+        margin-left: 3rem;
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
     }
 
     .hero-box h1 {
@@ -167,4 +160,10 @@ nav ul li a:hover {
     .hero-box button {
       margin-top: 1rem; /* optional: adds gap above button */
     }
+}
+
+@media (min-width: 1024px) {
+  .hero-box {
+    margin-left: 8rem; /* more space on big screens */
+  }
 }
