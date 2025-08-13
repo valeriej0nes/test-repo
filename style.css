@@ -15,6 +15,11 @@ body {
     overflow-x: hidden;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .blob-dark {
   position: fixed;
   top: -150px;  /* shift up so it overlaps slightly offscreen */
@@ -37,6 +42,7 @@ body {
   z-index: -1;
 }
 
+
 /* Line Spacing */
 p {
   line-height: 1.8;
@@ -45,10 +51,10 @@ p {
 /* Navbar */
 nav {
     display: flex;
-    flex-wrap: wrap; /* allows items to wrap on small screens */
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px 50px;
+    background-color: #111;
 }
 
 nav .logo {
@@ -57,8 +63,9 @@ nav .logo {
 }
 
 nav ul {
-    flex-wrap: wrap;
-    gap: 15px;
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 nav ul li a {
@@ -129,6 +136,6 @@ nav ul li a:hover {
 
 @media (min-width: 1024px) {
   .hero-content {
-    margin-left: 6rem; /* more space on big screens */
+    margin-left: 8rem; /* more space on big screens */
   }
 }
