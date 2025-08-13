@@ -12,6 +12,29 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.blob-dark {
+  position: fixed;
+  top: -150px;  /* shift up so it overlaps slightly offscreen */
+  left: -150px;
+  width: 500px;
+  height: 700px;
+  background: #00ff9d; /* brighter green */
+  border-radius: 100% 0% 100% 0% / 0% 0% 100% 100%;
+  z-index: -1;
+}
+
+.blob-light {
+  position: fixed; /* stays fixed even when scrolling */
+  bottom: -150px;  /* pushes part of the blob off-screen for style */
+  left: -150px;
+  width: 500px;
+  height: 800px;
+  background: #7affb5;
+  border-radius: 30% 70% 100% 0% / 0% 100% 0% 100%;
+  z-index: -1;
 }
 
 /* Line Spacing */
@@ -73,3 +96,39 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* fill screen height */
+  padding: 0 1rem; /* small horizontal padding */
+}
+
+.hero-content {
+  max-width: 600px; /* keeps text from stretching */
+  margin-top: 100px; /* pushes content down so it’s not on top of blob */
+  z-index: 1; /* keeps above blobs */
+}
+
+.hero-content p {
+  margin-bottom: 2rem; /* adds gap below the paragraph */
+  margin-left: 3rem;
+}
+
+.hero-content button {
+  margin-top: 1rem; /* optional: adds gap above button */
+}
+
+/* Adjust spacing for smaller devices */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 50px; /* smaller gap on mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    margin-left: 6rem; /* more space on big screens */
+  }
+}
